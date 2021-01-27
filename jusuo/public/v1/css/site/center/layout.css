@@ -1,0 +1,42 @@
+.center-container{width:1100px;margin:20px auto 0 auto;}
+.center-container .side-menu{float:left;padding:20px 0;width:164px;margin-right:20px;background-color:#ffffff;}
+.center-container .side-menu .top-title{font-size:16px;border-bottom:1px solid #EEEEEE;font-weight:bold;color:#666666;padding:0 15px 15px 15px;}
+.center-container .side-menu .menu-block{padding:20px 10px 0 10px;}
+.center-container .side-menu .menu-block .menu-title{font-size:12px;color:#BBBBBB;margin-bottom:8px;}
+.center-container .side-menu .menu-block .menu-list{}
+.center-container .side-menu .menu-block .menu-list .menu-row{font-size:14px;color:#666666;margin-bottom:5px;display:block;}
+.center-container .main-content{width:916px;float:left;background-color:#ffffff;}
+.center-container .main-content{width:916px;float:left;background-color:#ffffff;}
+
+/*分页样式*/
+.pager {overflow:hidden;margin-top:15px;text-align:center;}
+/*.layui-laypage {
+    float:right;
+}*/
+.layui-laypage .layui-laypage-curr .layui-laypage-em{  /*分页按钮样式*/
+    background-color:#3D82F7;
+}
+
+/*页面标题tab模块*/
+.module-box{background-color:#ffffff;}
+.module-title{height:64px;border-bottom:1px solid #efefef;}
+.module-title .title-block{position:relative;float:left;padding:0 20px;font-size:16px;color:#333333;line-height:64px;}
+.module-title .title-block .active-block{display:none;position:absolute;bottom:0;left:20%;height:4px;width:60%;background-color:#1582FF;}
+.module-title .title-block.active{font-weight:bold;}
+.module-title .title-block.active .active-block{display:block;}
+.module-title .search-block .search-btn:hover{cursor:pointer}
+.module-title .search-block{
+    width:246px;height:40px;border:1px solid #B7B7B7;overflow:hidden;padding-top:8px;float:right;margin-top:12px;margin-right:19px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.module-title .search-block input{color:#333333;font-size:16px;height:24px;width:190px;float:left;margin-left:10px;border:0;}
+.module-title .search-block .search-btn{height:22px;width:22px;float:right;margin-right:10px;}
+.module-title .search-block .search-btn img{height:22px;width:22px;}
+
+
+

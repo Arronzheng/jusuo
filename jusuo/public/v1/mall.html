@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>积分商城</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="static/swiper/swiper.min.js"></script>
+    <link rel="stylesheet" href="css/mobile/mall.css?">
+    <link rel="stylesheet" href="static/iconfont/iconfont.css">
+    <link rel="stylesheet" href="static/swiper/swiper.min.css">
+    <!--<link rel="stylesheet" href="css/codrops-component.css?1">-->
+    <style>
+
+    </style>
+</head>
+<body>
+<div id='top-category-outer'>
+    <div class="top-category active">家居日用</div>
+    <div class="top-category">家装软饰</div>
+    <div class="top-category">电子数码</div>
+    <div class="top-category">设计书刊</div>
+    <div id='top-category-service'>
+        <div class="sort-filter-text">筛选</div><div class="sort-filter-icon"></div>
+    </div>
+</div>
+
+<div class="bannerBox">
+    <div class="bannerBox" id="swipers"></div>
+    <div class="swiper-pagination"></div>
+</div>
+
+<div id="filter-content-outer">
+    <div class="filter-group-outer">
+        <div class="filter-title">品牌</div>
+        <div class="filter-group">
+            <div class="filter-content-block">不限</div>
+            <div class="filter-content-block checked">新明珠</div>
+            <div class="filter-content-block">蒙娜丽莎</div>
+            <div class="filter-content-block">东鹏</div>
+            <div class="filter-content-block">新中源</div>
+            <div class="filter-content-block">欧神诺</div>
+        </div>
+    </div>
+    <div class="filter-group-outer">
+        <div class="filter-title">类别</div>
+        <div class="filter-group">
+            <div class="filter-content-block">不限</div>
+            <div class="filter-content-block checked">家纺</div>
+            <div class="filter-content-block">厨卫</div>
+        </div>
+    </div>
+    <div class="filter-group-outer">
+        <div class="filter-title">积分范围</div>
+        <div class="filter-group">
+            <div class="filter-content-block">不限</div>
+            <div class="filter-content-block checked">0-50</div>
+            <div class="filter-content-block">50-100</div>
+            <div class="filter-content-block">100-200</div>
+            <div class="filter-content-block">200-500</div>
+            <div class="filter-content-block">>500</div>
+        </div>
+    </div>
+    <div class="filter-submit-outer">
+        <div class="filter-submit-cancel">取消</div>
+        <div class="filter-submit-reset">重置</div>
+        <div class="filter-submit-submit">确定</div>
+    </div>
+</div>
+</div>
+<div id="filter-content-mask"></div>
+<div id="product-list-outer">
+    <div class="product-item-outer">
+        <div class="product-image" style="background-image:url(images/mobile/9f952c16e0037adb.jpg)"></div>
+        <div class="product-right">
+            <div class="product-title">
+                圣凯罗负离子通体瓷抛砖CF86100顶级普斯浅灰 圣凯罗负离子通体瓷抛砖CF86100顶级普斯浅灰
+            </div>
+            <div class="product-description">
+                这个商品非常好的简介这个商品非常好的简介这个商品非常好的简介这个商品非常好的简介这个商品非常好的简介这个商品非常好的简介这个商品非常好的简介
+            </div>
+            <div class="product-price"><span class="font-lg">179</span>积分<del class="orange">￥149.50</del></div>
+            <div class="product-promotion">&nbsp;</div>
+            <div class="product-data"><span>3202人兑换</span></div>
+        </div>
+    </div>
+</div>
+<div id="product-list-outer">
+    <div class="product-item-outer">
+        <div class="product-image" style="background-image:url(images/mobile/61f64043482e25a9.jpg)"></div>
+        <div class="product-right">
+            <div class="product-title">
+                东鹏瓷砖负离子通体瓷抛砖CF86100顶级普斯浅灰 东鹏瓷砖负离子通体瓷抛砖CF86100顶级普斯浅灰
+            </div>
+            <div class="product-description">
+                这个商品非常好的简介这个商品非常好的简介这个商品非常好的简介这个商品非常好的简介这个商品非常好的简介这个商品非常好的简介这个商品非常好的简介
+            </div>
+            <div class="product-price"><span class="font-lg">79</span>积分<del class="orange">￥49.50</del></div>
+            <div class="product-data"><span>14928人兑换</span></div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(function(){
+
+        //首页banner
+        //getIndexBanner();
+
+        //首页分类
+        //getCategory();
+
+
+    });
+
+    function getIndexBanner(){
+        $.get('/mall/api/index_banner',{},function(res){
+            if(res.status==1){
+                banner = res.data;
+                var str='';
+                str+="<div class='swiper-container' id='swiper1'>"
+                str+="<div class='swiper-wrapper swiper-no-swiping'>"
+                for(var i=0;i<banner.length;i++){
+                    str+="<div class='swiper-slide' onclick='clickBanner(\""+banner[i].url+"\")'>"
+                    str+="<img src='"+banner[i].image+"'/>"
+                    str+="</div>"
+                }
+                str+="</div>"
+                str+="</div>"
+                str+="<div class='left'>"+"<img src='../../v1/images/site/index/bannerL.png'/></div>"
+                str+="<div class='right'><img src='../../v1/images/site/index/bannerR.png'/></div>"
+                $("#swipers").html(str);
+                //轮播
+                //最里层轮播
+                var mySwiper1 = new Swiper('#swiper1',{
+                    loop: true,
+                    autoplay : 4000,
+                    speed : 600,
+                    autoplayDisableOnInteraction : false,
+                    pagination: '.swiper-pagination',
+                    paginationType: 'custom',//这里分页器类型必须设置为custom,即采用用户自定义配置
+                    //下面方法可以生成我们自定义的分页器到页面上
+                    paginationCustomRender: function(swiper, current, total) {
+                        var customPaginationHtml = "";
+                        for(var i = 0; i < total; i++) {
+                            //判断哪个分页器此刻应该被激活
+                            if(i== (current-1) ){
+                                customPaginationHtml += '<span class="swiper-pagination-customs swiper-pagination-customs-active"></span>';
+                            } else {
+                                customPaginationHtml += '<span class="swiper-pagination-customs"></span>';
+                            }
+                        }
+                        return customPaginationHtml;
+                    }
+                });
+
+                //前进后退按钮
+                $(".bannerBox .left").click(function(){
+                    mySwiper1.slidePrev();
+                })
+                $(".bannerBox .right").click(function(){
+                    mySwiper1.slideNext();
+                })
+                $('.bannerBox .swiper-pagination').on('click','span',function(){
+                    var index = $(this).index() + 2;
+                    mySwiper1.slideTo(index-1, 500, false);//切换到第一个slide，速度为1秒
+                })
+            }
+        });
+    }
+
+</script>
+
+</body>
+</html>

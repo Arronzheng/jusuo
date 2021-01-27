@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--使用layui的话，这个一定要带上，否则样式会不兼容-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="description" content="超弦网络"/>
+    <meta name="keywords" content=""/>
+    <meta content="超弦网络" name="超弦网络"/>
+    <title>管理员端</title>
+
+    <!--全局基本都要用的js放这里 start-->
+    <script src="http://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
+    <script src="http://pf.fsqmh.com/plugins/layui-v2.5.4/layui/layui.all.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/layer/2.3/layer.js"></script>
+    <!--兼容各浏览器的placeholder插件-->
+    <script src="https://cdn.bootcss.com/jquery-placeholder/2.3.1/jquery.placeholder.min.js"></script>
+    <script src="http://pf.fsqmh.com/v1/js/ajax.js"></script>
+    <script src="http://pf.fsqmh.com/v1/js/util.js"></script>
+    <script src="http://pf.fsqmh.com/v1/js/sub_nav.js"></script>
+    <!--全局基本都要用的js放这里 end-->
+
+    <!--全局基本都要用的css放这里 start-->
+    <link rel="stylesheet" href="http://pf.fsqmh.com/plugins/layui-v2.5.4/layui/css/layui.css">
+    <link rel="stylesheet" href="http://pf.fsqmh.com/v1/css/admin/global.css">
+    <link rel="stylesheet" href="http://pf.fsqmh.com/v1/css/admin/layout.css">
+    <!--全局基本都要用的css放这里 end-->
+
+    <link rel="stylesheet" href="http://pf.fsqmh.com/v1/css/admin/module/form.css">
+
+
+
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <ul class="layui-nav c-header-nav" lay-filter="">
+            <li class="layui-nav-item">
+                <a href="javascript:;">管理员</a>
+                <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                    <dd><a href="javascript:;">退出登录</a></dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree c-side-menu" id="side-nav-ul">
+                <div class="layui-logo">管理后台</div>
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a href="javascript:;">首页</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body">
+        <div class="layui-card layadmin-header">
+            <div class="layui-breadcrumb" lay-filter="breadcrumb" style="visibility: visible;">
+                <a lay-href="">安全中心</a><span lay-separator="">/</span>
+                <a><cite>修改密码</cite></a>
+            </div>
+        </div>
+        <div class="layui-form" lay-filter="layuiadmin-app-form-list" id="layuiadmin-app-form-list" style="padding-top:20px;display: flex;justify-content: center;">
+            <form>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">原始密码</label>
+                    <div class="layui-input-inline">
+                        <input type="password" name="original_password" id="oldpwd" value="" lay-verify="required" placeholder="请输入原始密码" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">新密码</label>
+                    <div class="layui-input-inline">
+                        <input type="password" name="new_password" id="newpwd" value="" lay-verify="required" placeholder="请输入新密码" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">确认密码</label>
+                    <div class="layui-input-inline">
+                        <input type="password" name="confirm_password" id="rpwd" value="" lay-verify="required" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item submit-container">
+                    <div class="layui-input-block">
+                        <button class="layui-btn layui-btn-custom-blue" id="submitBtn" lay-submit lay-filter="submitFormBtn">确认提交</button>
+                        <button type="button" onclick="resetFilter()" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="http://pf.fsqmh.com/v1/js/admin/module/form.js"></script>
+<!--初始化专用script-->
+<script>
+    //JavaScript代码区域
+    //layui后台模板依赖element模块，如果以非模块化方式加载js，则需要对依赖模块进行init。
+    var form = layui.form;
+    layui.element.init();
+
+
+    /*自定义form验证*/
+    form.verify({
+    });
+    /*自定义form验证*/
+
+    form.render();
+
+</script>
+
+<!--页面方法专用script-->
+<script>
+
+    let submitAction = "";
+    let submitMethod = "";
+
+    //重置筛选条件
+    function resetFilter(){
+        $('input[name="original_password"]').val('')
+        $('input[name="new_password"]').val('')
+        $('input[name="confirm_password"]').val('')
+        form.render();
+    }
+
+    // 为新的密码添加正则验证
+    $('#newpwd').blur(function() {
+        var reg = /^[\w]{6,12}$/;
+        if(!($('#newpwd').val().match(reg))){
+            //layer.msg('请输入合法密码');
+            layer.msg('请输入合法密码');
+        }else {
+
+        }
+    });
+
+    //验证两次密码是否一致
+    $('#rpwd').blur(function() {
+        if($('#newpwd').val() != $('#rpwd').val()){
+            layer.msg('两次输入密码不一致!');
+        }else {
+
+        };
+    });
+
+    //提交Form信息
+    form.on('submit(submitFormBtn)', function(form_info){
+        //显示loading
+        layer.load(1);
+        //将提交按钮设置不可用
+        $('#submitBtn').attr('disabled',true);
+
+        var form_field = form_info.field;
+        //处理富文本：将富文本内容同步到表单域汇总
+        form_field.desc = layedit.getContent(editor1);
+        //处理开关控件：需要将其转换成数值
+        if(!form_field.status) {
+            form_field.status = "0";
+        }
+        //处理复选框：原layui的checkbox获取值机制比较麻烦，所以使用jq方式获取
+        var chk_value =[];
+        $('.cbHobby:checked').each(function(){
+            chk_value.push(this.value); //push 进数组
+        });
+        form_field.hobby = chk_value;
+
+        //提交方式
+        if(submitMethod){
+            form_field._method = submitMethod;
+        }
+
+        ajax_post(submitAction,
+                form_field,
+                function(result){
+                    if(result.status){
+                        layer.msg(result.msg, {
+                            time: 1500
+                        }, function(){
+                            parent.reloadTable();
+                            var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+                            parent.layer.close(index); //再执行关闭
+
+                        });
+                    }else{
+                        //将提交按钮恢复
+                        $('#submitBtn').attr('disabled',false);
+                        layer.msg(result.msg);
+                    }
+                },function(result){
+                    //将提交按钮恢复
+                    $('#submitBtn').attr('disabled',false);
+                    layer.msg('操作失败');
+                });
+
+        return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
+    });
+</script>
+
+</body>
+</html>

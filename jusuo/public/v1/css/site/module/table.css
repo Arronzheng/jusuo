@@ -1,0 +1,45 @@
+/*列表筛选区域样式*/
+.layui-layout-admin .layui-card-header{
+    position: relative;
+}
+.c-table-filter-container{
+    background-color:#F8F8F8;
+    padding:15px 60px 15px 15px;
+    border:1px solid #F1F2F4;
+    position:relative;
+    margin-bottom:15px;
+}
+.c-table-filter-container.fold{height:38px;overflow:hidden;}
+.c-table-filter-container #fold-spread {height:40px;line-height:40px;position:absolute;top:15px;right:15px;font-size:16px;color:#3E82F7}
+.c-table-filter-container #fold-spread:hover{cursor: pointer}
+.c-table-filter-container .filter-block {
+    margin-bottom:15px;
+}
+.c-table-filter-container .layui-form-label {
+    min-height: 16px;
+    line-height: 16px;
+    width:100px;
+}
+
+/*列表操作区域样式*/
+.op-container{
+    margin-bottom:10px;
+    overflow:hidden;
+}
+.op-container .left{
+    height:38px;
+    line-height:38px;
+    color:#999999;
+    font-size:14px;
+
+}
+
+
+/*列表table样式*/
+.layui-table th {
+    font-size:12px;
+    color:#000000;
+}
+.layui-table td {
+    font-size:12px;
+}

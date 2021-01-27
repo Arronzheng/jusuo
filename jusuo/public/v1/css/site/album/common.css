@@ -1,0 +1,88 @@
+/*分页*/
+#pager {
+
+    padding-top:10px;
+    color: #333333;
+    display: block;
+
+}
+
+#pager li {
+    display: inline-block;
+    min-width: 32px;
+    height: 32px;
+    cursor: pointer;
+    color: #666;
+    font-size: 13px;
+    line-height: 28px;
+    background-color: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    text-align: center;
+    margin: 0 4px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#pager .xl-nextPage,
+#pager .xl-prevPage {
+    width: 32px;
+    color: #1582FF;
+    height: 32px;
+}
+
+#pager li.xl-disabled {
+    opacity: .5;
+    cursor: no-drop;
+}
+
+#pager li.xl-disabled:hover{
+    background-color: #f9f9f9 !important;
+    border: 1px solid #D9D9D9 !important;
+    color: #666 !important;
+}
+
+#pager li.xl-active {
+    background-color: #1582FF;
+    border-color: #1582FF;
+    color: #FFF
+}
+
+#pager li:hover{
+    background-color: #1582FF;
+    border-color: #1582FF;
+    color: #FFF
+}
+
+#pager li.xl-jumpText {
+    margin-left:20px;
+    background-color: rgba(0,0,0,0);
+    border-color: rgba(0,0,0,0);
+    opacity: 1;
+}
+
+#pager li.xl-jumpText:hover{
+    background-color: rgba(0,0,0,0) !important;
+    border-color: rgba(0,0,0,0) !important;
+}
+
+#pager li.xl-jumpButton{
+    padding: 0 5px;
+}
+
+#pager #xlJumpNum {
+    width: 40px;
+    height:32px;
+    /*border-color: #D9D9D9;*/
+    margin-left:3px;
+    margin-right:3px;
+    border:none;
+    outline:1px solid #D9D9D9;
+    text-align:center;
+}
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+}
+input[type="number"]{
+    -moz-appearance:textfield;
+}

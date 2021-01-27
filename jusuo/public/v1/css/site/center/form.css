@@ -1,0 +1,28 @@
+/*checkbox*/
+.layui-form-checked[lay-skin=primary] i{
+    border-color: #3E82F7!important;
+    background-color: #3E82F7!important;
+}
+.layui-form-checkbox span {
+    /*height: 100%; //这个值有问题，所以注释掉*/
+    height:auto!important;
+}
+.layui-form-checkbox[lay-skin=primary]:hover i{border-color:#3E82F7;color:#fff}
+
+
+/*radio*/
+.layui-form-radio>i:hover, .layui-form-radioed>i{
+    color:#3D82F7;
+}
+
+
+/*layui date*/
+.layui-laydate .layui-this{
+    background-color:#3D82F7 !important;
+}
+
+
+/*select*/
+.layui-form-select dl dd.layui-this{
+    background-color:#3D82F7;
+}

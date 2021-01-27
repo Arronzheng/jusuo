@@ -1,0 +1,13 @@
+.sub-container{background:rgba(0,0,0,.01);padding:0 2.7vw;height:100vh;margin:0;overflow:hidden;overflow-y:scroll;}
+.sub-container-title{margin:10px 0 0 0;}
+.item-list{margin-bottom:20px;display:flex;position:relative;justify-content:space-between;flex-wrap:wrap;font-size:12px;line-height: 20px;}
+.item-outer{width:46vw;background:white;box-shadow:0 3px 5px rgba(0,0,0,.02);margin-top:10px;display:block;position:relative;border-radius:5px;overflow:hidden;}
+.item-image{width:100%;height: 26vw;position:absolute;top:0;left:0;background-size:cover;background-position:center;}
+.action-data-outer{width:100%;position:absolute;top: 26vw;margin-top:-20px;justify-content:flex-start;}
+.action-data-outer .action{display: inline-block;margin-left:5%;color:white;text-shadow:1px 1px 3px rgba(0,0,0,.02)}
+.action-data-outer .action .iconfont{font-size:12px;}
+.item-info{width:90%;height:40px;margin-top:60%;padding:0 5%;margin-bottom: 5px;}
+.title-outer{width:90%;height:20px;}
+.info-outer{width:90%;height:20px;color:#ccc;}
+.avatar{width: 18px;height: 18px;border-radius:50%;margin-right: 2px;background-size:cover;display: inline-block;/* vertical-align: baseline; */}
+.nickname{display: inline-block;vertical-align: top;}

@@ -1,0 +1,155 @@
+*{padding: 0;margin: 0;font-size: 13px;}
+html,body{width:100%;height:100%;overflow: hidden;background:#fff !important;overflow-y: scroll;}
+#category-filter-outer{height:10vw;line-height:10vw;display:flex;overflow: hidden;}
+#category-outer{width: 82vw;overflow-y:hidden;overflow-x:scroll;display:flex;height:10vw;}
+.category{background:#fff;min-width: 20vw;display:inline-block;text-align:center;padding: 0 1vw;}
+.category.active{background:#fff;font-weight:bold;}
+#filter-content-outer{position:fixed;z-index: 10;width: 70vw;height: 100vh;background: #fff;right: 0;top:50px;}
+#filter-content-mask{position:fixed;z-index:1;width:100vw;height:100vh;background:rgba(0,0,0,.5);top: 50px;}
+.filter-content-block{position:relative;height: 6vw;text-align: center;line-height: 6vw;margin: 0.8vw 0.8vw 0.8vw 0;padding: 1vw 3.8vw;border-radius: 4vw;}
+.filter-content-block.checked{background-color: #f8f8f8;}
+
+.filter-submit-outer{width: 70vw;height:12vw;line-height:12vw;display:flex;justify-content:space-between;text-align:center;position: absolute;bottom: 50px;}
+.filter-submit-outer .filter-submit-cancel{width: 33%;/* display:inline-block; */border-top:1px solid #f8f8f8;/* flex-shrink: 1; */flex: none;/* display: inline-flex; */}
+.filter-submit-outer .filter-submit-reset{width: 33%;background:#eee;/* display:inline-block; */border-top: 1px solid #f8f8f8;/* flex: none; *//* flex-shrink: 1; */}
+.filter-submit-outer .filter-submit-submit{width: 33%;background:rgb(236,59,60);/* display:inline-block; */border-top:1px solid rgb(236,59,60);flex: none;/* flex-shrink: 1; */}
+.filter-group-outer{padding:3vw;}
+
+.product-item-outer{width:100vw;line-height:18px;}
+.product-image{width:34vw;height:34vw;background-size:contain;background-position:center;display:inline-block;background-repeat:no-repeat;margin:2vw;}
+.product-right{display:inline-block;width:60vw;height:34vw;margin:2vw 0;overflow:hidden;position:relative;}
+.product-right i{vertical-align:top;margin-top:1px;background-size:contain;background-position:center;display:inline-block;background-repeat:no-repeat;height:14px;}
+i.exhibition{width:57px;background-image:url(../image/direct.png);}
+i.vip{margin-top:2px;width:24px;background-image:url(../image/vip.png);}
+i.ensure{margin-top:3px;margin-right:2px;width:34px;background-image:url(../image/ensure.png);}
+.product-title,.product-description{width:100%;display: -webkit-box;overflow: hidden;-webkit-line-clamp: 2;-webkit-box-orient: vertical;line-height:18px;}
+.product-shop{position:absolute;bottom:0;font-size:12px;color:#999;display:inline-block;padding-right:14px;line-height:14px;max-width:100%;box-sizing:border-box;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.product-shop:after{content:"";display:block;width:8px;height:8px;border-top:1px solid #999;border-left:1px solid #999;-webkit-transform-origin:50%;transform-origin:50%;-webkit-transform:rotate(135deg);transform:rotate(135deg);position:absolute;width:6px;height:6px;right:5px;top:50%;margin-top:-4px}
+.product-tag{padding:2px 5px;border-radius:2px;font-size:10px;height:12px;line-height:12px;color:#999;background-color:#f2f2f7}
+.product-price{position:absolute;bottom: 17px;font-size:12px;color:rgb(255,136,0);/* margin-top:2px; */margin-right:2px;}
+.font-lg{font-size:16px;}
+.orange{font-size:12px;color:#d2a448;margin-right:2px;}
+.border-red{font-size:10px;line-height:10px;height:10px;border:1px solid #e4393c;border-radius:2px;color:#e4393c;padding:1px 5px;margin:2px;}
+.product-promotion{position:absolute;bottom: 32px;}
+.product-data{position:absolute;bottom: -3px;}
+.product-data span{margin-right:8px;font-size:12px;color:#999;}
+#slide-mask{overflow:hidden;width:100vw;height:100%;margin:0 0; z-index: 2;position: absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.3)}
+
+#top-category-outer{
+    height: 50px;
+    line-height: 50px;
+    width: 100vw;
+    background-color: rgb(255,136,0);
+    color:white;
+    position:fixed;
+    z-index:2;
+}
+.top-category{
+    font-size: 13px;
+    padding: 0px 10px;
+    flex: none;
+}
+.top-category.active{
+    font-size: 18px;
+}
+#top-category-service{
+    background-color:rgb(255,136,0);
+    margin:0;
+    padding:0;
+    line-height: 50px;
+    /* padding-left:8px; */
+    height: 50px;
+    flex: none;
+    color:white;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    right: 7px;
+    top: 0;
+    z-index: 2;
+}
+#sort-filter-outer{
+    border-radius:15px;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 10px;
+    background-color: rgba(255,255,255,.2);
+    font-weight:bold;
+}
+.sort-filter-icon{
+    width: 14px;
+    height: 14px;
+    background-size: contain;
+    background-position: center;
+    margin-left: 1px;
+    margin-top: 6px;
+    display: inline-block;
+    vertical-align: top;
+    background-repeat: no-repeat;
+    background-image:url('../../images/mobile/filter1.png');
+    background-size: contain;
+}
+.sort-filter-text{
+    height: 26px;
+    line-height: 26px;
+    display: inline-block;
+    vertical-align: top;
+}
+.filter-title{
+    display: block;
+    width:100%;
+    line-height: 39px;
+}
+.filter-group{
+    display:flex;
+    justify-content: flex-start;
+    width:100%;
+    flex-wrap: wrap;
+}
+.filter-content-block{
+    flex:none;
+}
+.product-description{color:#999;margin: 3px 0;}
+.product-price del{margin-left:12px;}
+.bannerBox {
+    width: 100vw;
+    height: 34vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    position: relative;
+}
+
+.list-empty{
+    line-height: 10vw;
+    text-align: center;
+    color: #aaa;
+}
+#swipers{width:100vw;height: 34vw;overflow: hidden;margin: auto;}
+#top-category-content{width:78vw;overflow: hidden;overflow-x: scroll;display: flex;justify-content: space-between;align-items: flex-end;}
+#banner-bottom{width:100vw;height: 5vw;background-color: transparent;z-index: 1;position: absolute;bottom: -1px;overflow: hidden;}
+#banner-bottom-circle{width: 1000vw;height: 1000vw;background-color: white;z-index: 100;/* border: 1px solid black; */border-radius: 500vw;position: absolute;top: 0;left: -450vw;}
+#filter-outer-close{color:#aaa;position:absolute;bottom:50px;width:100%;line-height:50px;text-align:center}
+
+/*自定义分页器的样式，这个你自己想要什么样子自己写*/
+.swiper-pagination-customs {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 5px;
+    background: #000;
+    opacity: 0.1;
+    margin:0 4px;
+    margin-bottom:-3.5vw;
+}
+/*自定义分页器激活时的样式表现*/
+.swiper-pagination-customs-active {
+    width: 12px;
+    height: 8px;
+    opacity: 1;
+    margin-bottom:-3.5vw;
+    background-color: rgb(255,136,0);
+}
+

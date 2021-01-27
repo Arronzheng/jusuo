@@ -1,0 +1,159 @@
+.page-title{font-size:14px;margin:14px 0 20px 0;color:#333;}
+.cst-module-title{height:64px;border-bottom:1px solid #efefef;overflow:hidden;font-size:20px;color:#333333;}
+.cst-module-title .title-block{font-weight:bold;position:relative;float:left;padding:0 20px;font-size:20px;color:#333333;line-height:64px;}
+
+.cst-form-title{font-weight:bold;padding-top:10px;padding-bottom:12px;font-size:18px;color:#333333;}
+
+.cst-form-row{margin-bottom:30px;}
+.cst-form-item{}
+.cst-form-item .cst-form-label{margin-bottom:12px;line-height:16px;}
+.cst-form-item .cst-form-label .required{color:#FF4040;font-size:16px;margin-right:8px}
+.cst-form-item .cst-form-label .label-text{color:#333333;font-size:16px;}
+.cst-form-item .cst-form-label .help-text{color:#B7B7B7;font-size:14px;margin-left:16px;}
+
+.cst-form-item .cst-form-input{}
+/*.info-list {overflow:hidden;}*/
+.info-list .cst-upload-box{position:relative;float:left;margin-right:15px;margin-bottom:20px;}
+.cst-upload-block{position:relative;width:268px;height:159px;background:rgba(239,239,239,1);}
+.cst-upload-block:hover{cursor: pointer}
+.cst-upload-block .upload-img-preview{
+    position:absolute;top:0;left:0;height:100%;width:100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index:1;
+}
+.cst-upload-block .upload-icon{position:relative;z-index:0;}
+.cst-upload-block .upload-icon .icon-horizontal{
+    width:32px;height:6px;background:rgba(217,217,217,1);border-radius:5px;
+    position:absolute;left:118px;top:76px;
+}
+.cst-upload-block .upload-icon .icon-vertical{
+    width:6px;height:32px;background:rgba(217,217,217,1);border-radius:5px;
+    position:absolute;left:131px;top:64px;
+}
+
+.cst-upload-block-sm{position:relative;width:185px;height:139px;background:rgba(239,239,239,1);}
+.cst-upload-block-sm:hover{cursor: pointer}
+.cst-upload-block-sm .upload-img-preview{
+    position:absolute;top:0;left:0;height:100%;width:100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index:1;
+}
+.cst-upload-block-sm .upload-icon{position:relative;z-index:0;}
+.cst-upload-block-sm .upload-icon .icon-horizontal{
+    width:23px;height:6px;background:rgba(217,217,217,1);border-radius:5px;
+    position:absolute;left:81px;top:66px;
+}
+.cst-upload-block-sm .upload-icon .icon-vertical{
+    width:6px;height:23px;background:rgba(217,217,217,1);border-radius:5px;
+    position:absolute;left:89px;top:58px;
+}
+.cst-upload-box .delete-block{position:absolute;width:100%;bottom:0;left:0;height:22px;font-size:14px;}
+.cst-upload-box .delete-block:hover{cursor:pointer}
+.cst-upload-box .delete-block .delete-main{height:100%;width:100%;position:relative;}
+.cst-upload-box .delete-block .delete-text{height:22px;width:100%;line-height:22px;text-align:center;color:#ffffff;position:absolute;z-index:3;}
+.cst-upload-box .delete-block .delete-mask{height:22px;width:100%;background-color:#000;opacity: .6;position:absolute;z-index:2;}
+
+/*方案空间section*/
+.section-info-row{
+    position:relative;
+    margin-bottom: 10px;
+    padding: 20px 20px;
+    background-color: #ffffff;
+}
+#cst-add-section-btn-box{padding:20px;background-color:#ffffff;}
+#cst-add-section-btn:hover{cursor: pointer}
+#cst-add-section-btn{
+    font-size:16px;color:#ffffff;line-height:60px;
+    text-align:center;
+    width:100%;
+    height:60px;
+    background:rgba(21,130,255,1);
+    border-radius:4px;
+}
+
+/*提交*/
+.submit-box{
+    text-align:center;
+    padding-bottom:80px;
+}
+.save-btn{
+    border:1px solid #1582FF;
+    color:#1582FF;
+    width:188px;
+    height:44px;
+    border-radius:4px;
+    font-size:16px;
+    text-align:center;line-height:44px;
+    background-color:transparent;;
+}
+.save-btn.submit-btn{
+    background-color:#1582FF;
+    color:#ffffff;
+}
+
+/*产品清单*/
+#product-list{padding:20px;}
+#choose-product-btn:hover{cursor: pointer}
+#choose-product-btn{
+    width:176px;
+    height:44px;
+    background:rgba(21,130,255,1);
+    border-radius:4px;
+    font-size:16px;color:#ffffff;text-align:center;
+    margin-left:20px;
+    margin-bottom:40px;
+    line-height:44px;
+}
+
+
+
+/*checkbox*/
+.layui-form-checked[lay-skin=primary] i{
+    border-color: #3E82F7!important;
+    background-color: #3E82F7!important;
+}
+.layui-form-checkbox span {
+    /*height: 100%; //这个值有问题，所以注释掉*/
+    height:auto!important;
+}
+.layui-form-checkbox[lay-skin=primary]:hover i{border-color:#3E82F7;color:#fff}
+
+
+/*radio*/
+.layui-form-radio>i:hover, .layui-form-radioed>i{
+    color:#3D82F7;
+}
+
+
+/*layui date*/
+.layui-laydate .layui-this{
+    background-color:#3D82F7 !important;
+}
+
+
+/*select*/
+.layui-form-select dl dd.layui-this{
+    background-color:#3D82F7;
+}
+
+
+/*文件上传*/
+.layui-upload-drag{  /*文件拖拽上传框*/
+    line-height:1.3;
+    padding:20px 30px;
+    position:relative;
+}
+.layui-upload-drag .upload-img-preview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.layui-upload-drag .layui-icon{
+    color: #3E82F7;
+}

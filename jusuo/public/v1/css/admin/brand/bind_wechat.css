@@ -1,0 +1,26 @@
+.bind-container{
+	padding-left: 58px;
+	padding-top: 30px;
+}
+
+.bind-container .form-label{
+	display:block;
+	padding: 10px 0;
+	font-weight: 400;
+	line-height: 20px;
+}
+.bind-container .layui-form{
+	margin-top:30px;
+}
+
+#bind-wechat-box{margin-top:30px;}
+#bind-wechat-box .qrcode-img{
+	background-color:#E9E9E9;height:150px;width:150px;
+	-webkit-border-radius:8px;
+	-moz-border-radius:8px;
+	border-radius:8px;
+	margin-left:25px;
+}
+#bind-wechat-box .tips{
+	font-size:14px;color:#777777;margin-top:15px;
+}

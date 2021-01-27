@@ -1,0 +1,210 @@
+body{background:#fff !important;}
+
+.designer-list-container {
+    display: block;
+    position: relative;
+    padding-top: 14px;
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.nav_lujin {
+    padding-bottom: 14px;
+}
+
+.navtext1 {
+    color: #777777;
+    font-size: 14px;
+}
+
+.navtext2 {
+    font-size: 14px;
+}
+
+.sale-info {
+    display: flex;
+    /* margin-top: 20px; */
+    height: 540px;
+}
+
+.sale-info .info-left {
+    position: relative;
+    width: 460px;
+}
+
+.sale-info .info-left #sale-img {
+    width: 100%;
+    height: 460px;
+    overflow: hidden;
+    border: 1px solid #fcfcfc;
+}
+
+.sale-info .info-left .select-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.sale-info .info-left .select-box .img-outer {
+    border: 1px solid white;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.sale-info .info-left .select-box .img-outer:hover {
+    border: 1px solid #ff0036
+}
+
+.sale-info .info-left .select-box .img-outer img {
+    max-width: 100%;
+    max-height: 60px;
+}
+
+.sale-info .info-left .select-box .active {
+    border: 1px solid #ff0036;
+}
+
+.sale-info .right-info {
+    position: relative;
+    flex: 1 1;
+    margin-left: 40px;
+    height: 460px
+}
+
+.sale-info .right-info .title {
+    margin: 0;
+    font-size: 20px;
+    line-height: 28px;
+    color: #2b2f3a;
+    width: 100%;
+}
+
+.sale-info .right-info .title-text {
+    margin: 0;
+    font-size: 12px;
+    line-height: 28px;
+    color: #FF0036;
+    width: 100%;
+}
+
+.sale-info .right-info .price-box {
+    margin-top: 17px;
+    height: 24px;
+    display: flex;
+    align-items: center
+}
+
+.sale-info .right-info .price-box .price {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    color: #e74614
+}
+
+.sale-info .right-info .price-box .original-price {
+    color: #999;
+    margin-left: 20px;
+}
+
+.sale-info .right-info .detail {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    color: #999;
+    line-height: 20px;
+}
+
+.sale-info .right-info .detail table,
+.sale-info .right-info .detail table tr th,
+.sale-info .right-info .detail table tr td {
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.sale-info .right-info .detail table tr td {
+    min-width: 90px;
+}
+
+.choose-btns {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0px
+}
+
+.choose-btns .choose-amount {
+    width: 58px;
+    height: 44px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    position: relative;
+    margin-right: 10px;
+    float: left
+}
+
+.choose-btns .choose-amount input {
+    display: block;
+    width: 43px;
+    height: 42px;
+    line-height: 42px;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    border: none;
+    border: 0;
+    text-align: center
+}
+
+.choose-btns .choose-amount a.disabled {
+    color: #ccc;
+    cursor: not-allowed
+}
+
+.choose-btns .choose-amount a {
+    display: block;
+    width: 15px;
+    text-align: center;
+    height: 22px;
+    line-height: 22px;
+    overflow: hidden;
+    background: #f1f1f1;
+    color: #666;
+    position: absolute;
+    right: -1px;
+    border: 1px solid #ccc
+}
+
+.choose-btns .choose-amount a.btn-add {
+    top: -1px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.choose-btns .choose-amount a.btn-reduce {
+    bottom: -1px;
+    cursor: pointer;
+    user-select: none;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; }
+
+input[type="number"]{ -moz-appearance: textfield; }
+
+.choose-btns .btn-lg {
+    margin-right: 10px;
+    float: left;
+    height:46px;
+    line-height:46px;
+    padding:0 26px;
+    font-size:16px;
+    background-color:#ff0036;
+    color:#fff;
+    cursor:pointer;
+}
+.detail-text{width:100%;border-bottom:1px solid #eee;line-height:50px;font-size:20px;}
+.sale-detail-outer{margin-top:20px;}
+.sale-detail-outer img{width:100%;}

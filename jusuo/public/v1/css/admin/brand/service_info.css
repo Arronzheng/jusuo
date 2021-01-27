@@ -1,0 +1,9 @@
+.layui-layout-admin .layui-upload-drag{
+	padding:10px 10px
+}
+.layui-layout-admin .multiple-stuff-block{
+	margin-bottom:15px;margin-right:15px;float:left;
+}
+.layui-layout-admin .multiple-stuff-block .top{height:35px;line-height:35px;overflow:hidden;}
+.layui-layout-admin .multiple-stuff-block .top .close-btn{font-size:20px;width:30px;height:30px;text-align:center;float:right;}
+.layui-layout-admin .multiple-stuff-block .top .close-btn:hover{cursor: pointer}

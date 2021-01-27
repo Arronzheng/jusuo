@@ -1,0 +1,355 @@
+body{
+    background-color: rgb(248,248,248);
+    min-height: 600px;
+    color:#999;
+}
+
+input::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #999;
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #999;
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #999;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #999;
+}
+button{outline:none;}
+.bind{
+    width:430px;
+    left: 50%;
+    top: 40px;
+    margin: 0 0 0 -215px;
+    z-index: 999;
+    display: none;
+}
+
+.bind-close-btn{
+    margin: 20px 20px;
+}
+
+.mui-backdrop{
+    display: none;
+}
+
+.bind .bind-form{
+    padding: 50px 96px 60px 96px;
+    font-size: 14px!important;
+}
+
+.bind form input{
+    border-radius: 4px;
+}
+
+.bind form input:nth-child(2){
+    border-radius: 4px 0px 0px 4px!important;
+}
+
+.bind-form .bind-title{
+    color: #555555;
+}
+
+.bind-form .bind-form-input{
+    height: 30px;
+    width: 226px;
+    margin-top: 18px;
+    padding-left: 8px;
+    border: 2px solid rgb(234,234,234);
+}
+
+.bind-form .bind-form-input:hover{
+    border: 2px solid #F8B500;
+}
+
+.bind-form .protocol{
+    margin-top: 20px;
+}
+
+.bind-form .bind-form-checkbox{
+    top:2px;
+}
+
+.bind-form .bind-form-button{
+    width: 240px;
+    height: 30px;
+    background-color: #F8B500;
+    border: 1px solid #F8B500;
+    color:#fff;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.bind-form .skip{
+    margin-top: 40px;
+}
+
+.bind-form .code-button{
+    width: 76px;
+    background-color: #F8B500;
+    border: 1px solid #F8B500;
+    color:#fff;
+    height: 34px;
+    left: -2px;
+    top:-1px;
+    border-radius: 0px 4px 4px 0px!important;
+}
+
+/*.bind-form .gotCode{*/
+    /*background-color: rgb(233,233,233)!important;*/
+    /*border: 1px solid rgb(233,233,233)!important;*/
+/*}*/
+
+.bind-form .third-registered{
+    margin-top: 30px;
+}
+
+.bind-form .wechat-code{
+    width: 136px;
+    height: 136px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border: 8px solid rgb(233,233,233);
+    border-radius: 6px;
+}
+
+.bind-form .wechat-scan{
+    margin-top: 8px;
+}
+
+.bind-form .mobile-registered{
+    margin-top: 70px;
+}
+
+.login-main .wechat-code{
+    margin: 0 auto;
+    width: 136px;
+    height: 136px;
+    border: 8px solid rgb(233,233,233);
+    border-radius: 6px;
+}
+
+.login-main .wechat-login{
+    width: 340px;
+    right: 100px;
+    top: 70px;
+}
+
+.login-main .brand-wechat-login{
+    width: 600px;
+    /*margin-top: 100px!important;*/
+    margin: 0 auto;
+    height: 370px;
+}
+
+.login-main .login-main-title{
+    width: 600px;
+    margin: 0 auto;
+    letter-spacing: 4px;
+    padding: 80px 0 30px 0px;
+}
+
+.login-main .login-main-title .brand-login-main{
+    margin: 0 auto;
+    display: table;
+}
+
+.login-main .login-main-title .grey-line-box{
+    height: 14px;
+    width: 1px;
+    background-color: #fff;
+    display: inline-block;
+    position: relative;
+    top: -2px;
+    margin: 0px 28px 0 28px;
+}
+
+.login-main .brand-wechat-login .login-header span{
+    cursor: pointer;
+    font-size: 18px;
+    display: inline-block;
+}
+
+.login-main .brand-wechat-login .login-header .line-grey{
+    height: 2px;
+    background-color: rgb(234,234,234);
+    position: relative;
+    top: -2px;
+}
+
+.login-main .brand-wechat-login .login-header .line-yellow{
+    height: 4px;
+    background-color: #ffc23a;
+    z-index: 999;
+    position: relative;
+    margin-top: 10px;
+}
+
+.login-main .wechat-login-header{
+    height: 70px;
+}
+
+.login-main .login-header{
+    height: 70px;
+    width: 276px;
+    margin: 0 auto;
+    padding-top: 46px!important;
+}
+
+.login-main .login-text{
+    color:#555555;
+    margin: 30px 0px 0px 30px;
+}
+
+.login-main .login-logo{
+    height: 21px;
+    width: 112px;
+    left: 62px;
+    top: -8px;
+}
+
+.login-main .login-tab{
+    width: 84px;
+    height: 76px;
+}
+
+.login-main .phone-login-tab{
+    background-image: url(../images/phone-tab.png);
+    background-size: cover;
+}
+
+.login-main .phone-login-logo{
+    background-image: url(../images/phone-login-text.png);
+    background-size: cover;
+}
+
+.login-main .code-login-tab{
+    background-image: url(../images/code-tab.png);
+    background-size: cover;
+}
+
+.login-main .code-login-logo{
+    background-image: url(../images/code-login-text.png);
+    background-size: cover;
+}
+
+.login-main .wechat-code{
+    margin-top: 10px;
+}
+
+.login-main .wechat-scan{
+    margin-top: 10px;
+}
+
+.login-main .more-choose{
+    margin: 40px 0 28px 0px;
+}
+
+.login-main .brand-wechat-login .more-choose{
+    margin-top: 40px!important;
+    margin-bottom: 28px!important;
+    width: 276px;
+    margin: 0 auto;
+}
+
+.more-choose-title{
+    float: right;
+    margin-right: 20px;
+}
+
+.psw-login{
+    width: 276px;
+}
+
+.psw-login .login-username{
+    background-image: url(../../images/admin/login/input-user-icon.png);
+    background-size: 33px;
+    background-position: 5px 1px;
+    background-color: rgb(249,249,249);
+}
+
+.psw-login .login-psw{
+    background-image: url(../../images/admin/login/input-psw-icon.png);
+    background-size: 33px;
+    background-position: 5px 1px;
+    background-color: rgb(249,249,249);
+}
+
+.psw-login .psw-login-logo {
+    width: 42px;
+    height: 30px;
+    position: absolute;
+}
+
+.psw-login .psw-login-box{
+    border: 2px solid rgb(234,234,234);
+    margin-top: 20px;
+    height: 30px;
+    border-radius: 4px;
+}
+
+
+.psw-login .psw-login-box:hover{
+    border: 2px solid rgb(255,201,81);
+}
+
+.psw-login .psw-login-box input{
+    width: 83%;
+    border: 0px;
+    padding: 5px 0px 5px 46px;
+    height: 65%;
+}
+
+.psw-login button{
+    width: 276px;
+    height: 34px;
+    border: 0px;
+    margin-top: 20px;
+    background-color: rgb(255,201,81);
+}
+
+.psw-login .brand_login_btn{
+    width: 276px;
+    height: 34px;
+    border: 0px;
+    margin-top: 20px;
+    background-color: rgb(255,201,81);
+    text-align: center;
+    line-height: 34px;
+    cursor: pointer;
+}
+
+.designer-msg-main #bind{
+    margin: 0;
+    display: block;
+}
+
+#bind.hide{
+    display: none;
+}
+
+.link-box{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.link-box a:first-child{
+    margin-left: 0;
+}
+
+.link-box a{
+    margin-left: 40px;
+    color: #ddd;
+}
+
+.link-box a:hover{
+    color: #aaa;
+}
+
+
+
+
+
+
+

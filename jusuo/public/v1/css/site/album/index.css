@@ -1,0 +1,315 @@
+body{
+    background-color:#FBFBFB;
+    height:100%;
+    width:100%;
+    /*max-width:1440px;*/
+    margin: 0 auto;
+}
+.album-list-container{
+    display: block;
+    position: relative;
+    padding-top:14px;
+    width:1100px;
+    margin: 0 auto;
+    padding-bottom:80px;
+}
+.nav_lujin{
+    padding-bottom:14px;
+}
+.navtext1{
+    color:#777777;
+    font-size:14px;
+}
+.navtext2{
+    font-size:14px;
+}
+.album-nav{
+    width:1070px;
+    background-color:#FFFFFF;
+    box-shadow:0px 0px 10px 0px rgba(2,18,37,0.02);
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left:30px;
+}
+.nav_container{
+    display: flex;
+    /*border:1px solid #000000;*/
+}
+.nav_span1{
+    display: inline-block;
+}
+.nav_span{
+    line-height:46px;
+    color:#333333;
+    font-size:16px;
+    font-weight:bold;
+}
+.nav_text{
+    display: flex;
+    flex-flow: wrap;
+    line-height:46px;
+}
+.nav_t:hover{
+    cursor: pointer;
+}
+.nav_t{
+    line-height:46px;
+    margin-left:30px;
+    font-size:16px;
+    color:#333333;
+}
+.nav_t1{
+    line-height:46px;
+    margin-left:30px;
+    font-size:16px;
+    color:#1582FF;
+    font-weight:bold;
+}
+.nav_t:hover{
+    color:#1582FF;
+    font-weight:bold;
+}
+.active{
+    color:#1582FF;
+    font-weight:bold;
+}
+.chooselabel{
+    margin-top:20px;
+    padding-left:30px;
+    width:1070px;
+    padding-top:20px;
+    padding-bottom:20px;
+    background-color:#FFFFFF;
+}
+.paixu{
+    display: inline-block;
+    margin-left:-30px;
+
+}
+.paixu-block{display:inline-block}
+.paixu_label{
+    color:#333333;
+    font-size:16px;
+    margin-left:30px;
+}
+.paixu_label:hover{
+    color:#1582FF;
+    cursor:pointer;
+}
+.active1{
+    color:#1582FF;
+}
+.up_down:hover{cursor:pointer}
+.up_down{
+    display: inline-block;
+    margin-left:4px;
+    font:14px 'Microsoft Yahei';
+    line-height:1.4;
+}
+.up_down .iconfont{
+    color:#B7B7B7;
+    font-size:14px;
+}
+.up_down .iconfont.active{
+    color:#1582FF;
+}
+.down{
+    margin-top:-22px;
+}
+.chooselabel1{
+    display: inline-block;
+    margin-left:30px;
+}
+.chooselabel1 .iconfont:hover{
+    cursor: pointer;}
+.chooselabeltext{
+    font-size:16px;
+    margin-left:4px;
+}
+.leadlabel{
+    display: inline-block;
+}
+.leadspan{
+    margin-left:30px;
+    color:#333333;
+    font-size:16px;
+}
+.projectcontainer{
+
+    margin-top:20px;
+    overflow:hidden;
+}
+.projectitem{
+    float:left;
+    width:354px;
+    position: relative;
+    height:435px;
+    margin-bottom:30px;
+    margin-right:19px;
+    background-color:#FFFFFF;
+}
+.projectitem:nth-child(3n){
+    margin-right:0;
+}
+.designimage{
+    display:block;
+    width:354px;
+    height:266px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.designimage:hover{cursor:pointer}
+
+.wholeview{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#333333;
+    color:#FFFFFF;
+    width:70px;
+    height:30px;
+    border-radius: 15px;
+    font-size:16px;
+    opacity: 0.8;
+    position: absolute;
+    top:20px;
+    right:20px;
+}
+.wholeview:hover{
+    opacity: 1;
+}
+.namelabel{
+    margin-top:4px;
+    margin-left:20px;
+    line-height:46px;
+    font-size:20px;
+    font-weight:bold;
+    color:#333333;
+    width:303px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.personimage{
+    width:26px;
+    height:26px;
+    border-radius: 50%;
+    margin-left:20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.designername{
+    display: inline-block;
+    line-height:46px;
+    color:#777777;
+    font-size:16px;
+    margin-left:6px;
+}
+.detail{
+    display: flex;
+    position: relative;
+    height:46px;
+    align-items: center;
+    margin-top:-6px;
+}
+.areaview{
+    width:68px;
+    height:26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    opacity:0.8;
+    margin-left:20px;
+    border:1px solid #333333;
+    font-size:16px;
+    color:#333333;
+}
+.lookview{
+    display: inline-block;
+    position: absolute;
+    right:20px;
+}
+.looknumber{
+    line-height:46px;
+    color:#777777;
+    font-size:16px;
+}
+.projectitem:hover{
+    box-shadow:2px 4px 22px 0px rgba(2,18,37,0.14);
+}
+
+
+.album-list-container1{
+    display: flex;
+    width:1100px;
+    margin:0 auto;
+    /*height:278px;*/
+
+}
+.designer_text{
+    position: relative;
+    margin-top:10px;
+    height:46px;
+    line-height:46px;
+    width:314px;
+    /*border:1px solid #000000;*/
+    align-items: center;
+    padding-left:20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.d_area{
+    color:#B7B7B7;
+    font-size:20px;
+    font-weight:bold;
+}
+.d_title{
+    color:#333333;
+    font-size:20px;
+    font-weight:bold;
+
+}
+.d_detail1{
+    line-height:46px;
+    cursor: pointer;
+}
+.looknumber{
+    font-size:16px;
+    color:#B7B7B7;
+}
+.d_person1{
+    display: flex;
+    align-items: center;
+    height:66px;
+    border-top:1px solid #EFEFEF;
+
+}
+.d_personimage1{
+    width:26px;
+    height:26px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left:20px;
+}
+.identity{
+    width:20px;
+    margin-left:10px;
+    height:20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../images/index/实名认证icon.png");
+}
+.d_personname{
+    color:#333333;
+    font-size:16px;
+    margin-left:10px;
+}
+
+
